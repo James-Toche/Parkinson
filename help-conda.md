@@ -54,3 +54,11 @@ c.NotebookApp.browser = 'safari'
 $ jupyter kernelspec list 
 $ python -m ipykernel install --user --name=env_name --display-name="Python (env_name)"
 
+
+# HELP WITH WINDOWS POWERSHELL
+1. Run as administrator
+2. Type 
+$ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+3. Type
+$ conda init powershell
