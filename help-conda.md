@@ -62,3 +62,21 @@ $ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 3. Type
 $ conda init powershell
+
+
+# HELP WITH STALE STATE
+conda install -n parkinson --force-reinstall python=3.14 libffi ipykernel
+conda run -n parkinson python -c "import ctypes; print('ctypes OK')"
+conda run -n parkinson python -m ipykernel install --user --name parkinson --display-name "Python (parkinson)" --force
+
+# HELP WITH ML
+- Logistic Regression uses straight lines to estimate classification probabilities simply and quickly.
+- XGBClassifier combines a team of sequential decision trees to fix errors.
+- SVC finds the widest possible margin between data groups for complex boundaries.
+- Validation beats training accuracy due to strong regularization or an easier validation split.
+
+# TMRW
+- List 5 models that make sense to use in this dataset.
+- The code we downloaded uses logistic regression, SVC, XGB; does this make sense to use, what if it's actually stupid?
+- AI tells us to use Random Forest and others.
+- We need to find a way to compare all these models, so which criteria should we use to determine the best model?
